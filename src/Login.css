@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Fredoka', sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #003366; /* Dark blue background */
+    background-image: url('background.png'); /* Background pattern image */
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 5px;
+    /* margin-top: 5px; Space between the top of the window and the logo */
+}
+
+.logo img {
+    width: 150px; 
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box {
+    /* background: #fff; */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: white;
+}
+
+.login-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: rgb(255, 10, 10);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #FE7720;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.login-button:hover {
+    background-color: #e65c00;
+}
+
+.forgot-password{
+    text-align: right;
+    padding-bottom: 30px;
+}
+.signup-link {
+    text-align: center;
+}
+
+.forgot-password a{
+    color: white;
+    text-decoration: none;
+}
+.signup-link a {
+    color: #FE7720;
+    text-decoration: none;
+}
+
+.forgot-password a:hover,
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.success {
+    color: #FE7720;
+    text-align: center;
+    margin-top: 10px;
+}
+
