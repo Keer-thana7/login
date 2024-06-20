@@ -30,6 +30,8 @@ const Login = () => {
                 navigate('/dashboard');
             } else {
                 setError('***Invalid credentials***');
+                setUsername('');
+                setPassword('');
             }
         } catch (error) {
             console.error('Login error:', error);
