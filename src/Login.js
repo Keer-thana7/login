@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import Logo from './Logo.png';
 
@@ -9,6 +9,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,9 +24,10 @@ const Login = () => {
             if (user) {
                 setSuccess('Login successful!');
                 console.log('Login successful:', user);
+                sessionStorage.setItem('loggedInUser', JSON.stringify(user));
                 setUsername('');
                 setPassword('');
-                
+                navigate('/dashboard');
             } else {
                 setError('***Invalid credentials***');
             }
@@ -75,7 +77,7 @@ const Login = () => {
                     <button type="submit" className="login-button">Login</button>
                 </form>
                 <div className="signup-link">
-                    Not a Merchant yet? <Link to="/register">Sign up Now</Link>
+                    Not a Merchant yet? <a href="/register">Sign up Now</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,65 @@
+.dashboard-container {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.user-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.user-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FE7720;
+    color: white;
+}
+
+.pagination {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    background-color: #FE7720;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pagination button:hover {
+    background-color: #e66c1b;
+}
+
+.pagination button.active {
+    background-color: #e66c1b;
+    font-weight: bold;
+}
+
+.logout-button {
+    background-color: #ff4c4c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #ff1c1c;
+}

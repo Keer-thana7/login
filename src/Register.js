@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 import Logo from './Logo.png'; 
 
@@ -11,6 +12,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,12 +29,14 @@ const Register = () => {
             });
             setSuccess('Registration successful!');
             console.log('Registration successful:', response.data);
-            
+            sessionStorage.setItem('registeredUser', JSON.stringify(response.data));
+
             setBusinessName('');
             setUserHandle('');
             setEmail('');
             setPhone('');
             setPassword('');
+            navigate('/login');
         } catch (error) {
             console.error('Registration error:', error);
             setError('Registration failed. Please try again.');
